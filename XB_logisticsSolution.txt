@@ -1,0 +1,429 @@
+2022-07-04 23:59:16.109  INFO 39447 --- [nio-8080-exec-2] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-04 23:59:16.109  INFO 39447 --- [nio-8080-exec-2] c.x.o.r.FrontController                  : Search Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"search","core_version":"1.0.0","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl/","transaction_id":"a00a7fcc-3ac1-449e-a7da-8edd43693f84","message_id":"03a18378-e3f0-4446-82d3-9731b2b3ddba","timestamp":"2022-07-04T18:29:14.503Z"},"message":{"intent":{"fulfillment":{"type":"CoD","vehicle":{"registration":""},"start":{"location":{"id":"agrihdharam-1000","gps":"12.970557,77.6448023","address":{"door":"3rd floor,","name":"agrihdharam","ward":"indira nagar 12th main","building":"Just dogs Building","street":"12th main,","city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560038","locality":"indira nagar"}}},"end":{"location":{"gps":"12.974002, 77.613458","address":{"area_code":"560001"}}}},"category":{"id":"Standard Delivery"},"payment":{"@ondc/org/collection_amount":"0"},"@ondc/org/payload_details":{"weight":{"value":"10","range":{},"unit":"Kilogram"},"dimensions":{"length":{"value":"1","range":{},"unit":"meter"},"breadth":{"value":"1","range":{},"unit":"meter"},"height":{"value":"1","range":{},"unit":"meter"}},"category":"Mobile Phone","value":{"currency":"INR","value":"1000","maximum_value":"0"}}}}}
+2022-07-04 23:59:16.149  INFO 39447 --- [pool-3-thread-2] c.x.o.a.c.r.SearchRequestProcessor       : process : onSearchRequest = OnSearchRequest(context=com.xb.ondc.entity.schema.Context@41383bba, message=CatalogMessage(catalog=Catalog(descriptor=null, categories=[com.xb.ondc.entity.schema.search.Category@6dbc552], fulfillments=[com.xb.ondc.entity.schema.search.Fullfillment@4b6e1566], payments=[com.xb.ondc.entity.schema.search.Payment@5a59856a], offers=[null], providers=[null], exp=2022-07-04 23:59:16.149)), error=null)
+2022-07-04 23:59:16.158  INFO 39447 --- [pool-3-thread-2] c.x.o.a.c.r.SearchRequestProcessor       : process : callbackPayload = {
+  "context" : {
+    "domain" : "nic2004:60232",
+    "country" : "IND",
+    "city" : "std:080",
+    "action" : "on_search",
+    "core_version" : "1.0.0",
+    "bap_id" : "logistics.ondcsellerapp.com",
+    "bap_uri" : "https://ondctest.sellerapp.in/bapl/",
+    "bpp_id" : null,
+    "bpp_uri" : null,
+    "transaction_id" : "a00a7fcc-3ac1-449e-a7da-8edd43693f84",
+    "message_id" : "03a18378-e3f0-4446-82d3-9731b2b3ddba",
+    "timestamp" : "2022-07-04T18:29:14.503Z",
+    "coreDataJson" : null
+  },
+  "message" : {
+    "catalog" : {
+      "exp" : 1656959356149,
+      "bpp/descriptor" : null,
+      "bpp/categories" : [ {
+        "id" : "Standard Delivery",
+        "descriptor" : null,
+        "time" : null,
+        "tags" : null,
+        "parent_category_id" : null
+      } ],
+      "bpp/fullfilments" : [ {
+        "id" : null,
+        "type" : "CoD",
+        "rating" : null,
+        "state" : null,
+        "tracking" : null,
+        "customer" : null,
+        "agent" : null,
+        "person" : null,
+        "contact" : null,
+        "vehicle" : {
+          "category" : null,
+          "capacity" : null,
+          "make" : null,
+          "model" : null,
+          "size" : null,
+          "variant" : null,
+          "color" : null,
+          "registration" : "",
+          "energy_type" : null
+        },
+        "start" : {
+          "location" : {
+            "id" : "agrihdharam-1000",
+            "descriptor" : null,
+            "gps" : "12.970557,77.6448023",
+            "address" : {
+              "door" : "3rd floor,",
+              "name" : "agrihdharam",
+              "building" : "Just dogs Building",
+              "street" : "12th main,",
+              "locality" : "indira nagar",
+              "ward" : "indira nagar 12th main",
+              "city" : "Bengaluru",
+              "state" : "Karnataka",
+              "country" : "India",
+              "area_code" : "560038"
+            },
+            "city" : null,
+            "country" : null,
+            "circle" : null,
+            "polygon" : null,
+            "time" : null,
+            "rateable" : null,
+            "station_code" : null,
+            "3dspace" : null
+          },
+          "time" : null,
+          "instructions" : null,
+          "contact" : null,
+          "person" : null,
+          "authorization" : null
+        },
+        "end" : {
+          "location" : {
+            "id" : null,
+            "descriptor" : null,
+            "gps" : "12.974002, 77.613458",
+            "address" : {
+              "door" : null,
+              "name" : null,
+              "building" : null,
+              "street" : null,
+              "locality" : null,
+              "ward" : null,
+              "city" : null,
+              "state" : null,
+              "country" : null,
+              "area_code" : "560001"
+            },
+            "city" : null,
+            "country" : null,
+            "circle" : null,
+            "polygon" : null,
+            "time" : null,
+            "rateable" : null,
+            "station_code" : null,
+            "3dspace" : null
+          },
+          "time" : null,
+          "instructions" : null,
+          "contact" : null,
+          "person" : null,
+          "authorization" : null
+        },
+        "rateable" : null,
+        "tags" : null,
+        "@ondc/org/awb_no" : null,
+        "@ondc/org/ewaybillno" : null,
+        "@ondc/org/ebnexpirydate" : null,
+        "provider_id" : null
+      } ],
+      "bpp/payments" : [ {
+        "uri" : null,
+        "params" : null,
+        "type" : null,
+        "status" : null,
+        "time" : null,
+        "tl_method" : null,
+        "collected_by" : null,
+        "@ondc/org/collection_amount" : "0",
+        "@ondc/org/cod-settlement_window" : null,
+        "@ondc/org/cod-settlement_window_status" : null,
+        "@ondc/org/cod-settlement_details" : null
+      } ],
+      "bpp/offers" : [ null ],
+      "bpp/providers" : [ null ]
+    }
+  },
+  "error" : null
+}
+2022-07-04 23:59:16.162  INFO 39447 --- [pool-3-thread-2] c.x.o.a.AuthenticationManager            : Generating Authentication String for header
+2022-07-04 23:59:16.163  INFO 39447 --- [pool-3-thread-2] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: rzC8xCLrtDxKM247TC9aodDYbaOTXqbndW+Z9NCRnN1ClYm10o7Txp5ulvVbtM+Zf/nMj4dtkpvQmGXDclLhqg==
+2022-07-04 23:59:16.164  INFO 39447 --- [pool-3-thread-2] c.x.o.a.SignatureProcessor               : Signature Generated : 2hGk0esoCmT/f+PWodYgQcWZhBYL/n6VMfqOAv3LDYaaukJ1vsrakWJfxGEvnWI80D+fCqLLOmKgIRA25n5ECA==
+2022-07-04 23:59:16.167  INFO 39447 --- [pool-3-thread-2] c.x.o.a.AuthenticationManager            : Signed payload 2hGk0esoCmT/f+PWodYgQcWZhBYL/n6VMfqOAv3LDYaaukJ1vsrakWJfxGEvnWI80D+fCqLLOmKgIRA25n5ECA== 
+Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959356", expires="1656959456", headers="(created) (expires) digest", signature="2hGk0esoCmT/f+PWodYgQcWZhBYL/n6VMfqOAv3LDYaaukJ1vsrakWJfxGEvnWI80D+fCqLLOmKgIRA25n5ECA=="
+2022-07-04 23:59:16.167  INFO 39447 --- [pool-3-thread-2] c.x.o.a.AuthenticationManager            : Authentication header generated Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959356", expires="1656959456", headers="(created) (expires) digest", signature="2hGk0esoCmT/f+PWodYgQcWZhBYL/n6VMfqOAv3LDYaaukJ1vsrakWJfxGEvnWI80D+fCqLLOmKgIRA25n5ECA=="
+ 
+2022-07-04 23:59:16.167  INFO 39447 --- [pool-3-thread-2] c.x.o.n.MasterOndcHttpClient             : Callback Payload = {
+  "context" : {
+    "domain" : "nic2004:60232",
+    "country" : "IND",
+    "city" : "std:080",
+    "action" : "on_search",
+    "core_version" : "1.0.0",
+    "bap_id" : "logistics.ondcsellerapp.com",
+    "bap_uri" : "https://ondctest.sellerapp.in/bapl/",
+    "bpp_id" : null,
+    "bpp_uri" : null,
+    "transaction_id" : "a00a7fcc-3ac1-449e-a7da-8edd43693f84",
+    "message_id" : "03a18378-e3f0-4446-82d3-9731b2b3ddba",
+    "timestamp" : "2022-07-04T18:29:14.503Z",
+    "coreDataJson" : null
+  },
+  "message" : {
+    "catalog" : {
+      "exp" : 1656959356149,
+      "bpp/descriptor" : null,
+      "bpp/categories" : [ {
+        "id" : "Standard Delivery",
+        "descriptor" : null,
+        "time" : null,
+        "tags" : null,
+        "parent_category_id" : null
+      } ],
+      "bpp/fullfilments" : [ {
+        "id" : null,
+        "type" : "CoD",
+        "rating" : null,
+        "state" : null,
+        "tracking" : null,
+        "customer" : null,
+        "agent" : null,
+        "person" : null,
+        "contact" : null,
+        "vehicle" : {
+          "category" : null,
+          "capacity" : null,
+          "make" : null,
+          "model" : null,
+          "size" : null,
+          "variant" : null,
+          "color" : null,
+          "registration" : "",
+          "energy_type" : null
+        },
+        "start" : {
+          "location" : {
+            "id" : "agrihdharam-1000",
+            "descriptor" : null,
+            "gps" : "12.970557,77.6448023",
+            "address" : {
+              "door" : "3rd floor,",
+              "name" : "agrihdharam",
+              "building" : "Just dogs Building",
+              "street" : "12th main,",
+              "locality" : "indira nagar",
+              "ward" : "indira nagar 12th main",
+              "city" : "Bengaluru",
+              "state" : "Karnataka",
+              "country" : "India",
+              "area_code" : "560038"
+            },
+            "city" : null,
+            "country" : null,
+            "circle" : null,
+            "polygon" : null,
+            "time" : null,
+            "rateable" : null,
+            "station_code" : null,
+            "3dspace" : null
+          },
+          "time" : null,
+          "instructions" : null,
+          "contact" : null,
+          "person" : null,
+          "authorization" : null
+        },
+        "end" : {
+          "location" : {
+            "id" : null,
+            "descriptor" : null,
+            "gps" : "12.974002, 77.613458",
+            "address" : {
+              "door" : null,
+              "name" : null,
+              "building" : null,
+              "street" : null,
+              "locality" : null,
+              "ward" : null,
+              "city" : null,
+              "state" : null,
+              "country" : null,
+              "area_code" : "560001"
+            },
+            "city" : null,
+            "country" : null,
+            "circle" : null,
+            "polygon" : null,
+            "time" : null,
+            "rateable" : null,
+            "station_code" : null,
+            "3dspace" : null
+          },
+          "time" : null,
+          "instructions" : null,
+          "contact" : null,
+          "person" : null,
+          "authorization" : null
+        },
+        "rateable" : null,
+        "tags" : null,
+        "@ondc/org/awb_no" : null,
+        "@ondc/org/ewaybillno" : null,
+        "@ondc/org/ebnexpirydate" : null,
+        "provider_id" : null
+      } ],
+      "bpp/payments" : [ {
+        "uri" : null,
+        "params" : null,
+        "type" : null,
+        "status" : null,
+        "time" : null,
+        "tl_method" : null,
+        "collected_by" : null,
+        "@ondc/org/collection_amount" : "0",
+        "@ondc/org/cod-settlement_window" : null,
+        "@ondc/org/cod-settlement_window_status" : null,
+        "@ondc/org/cod-settlement_details" : null
+      } ],
+      "bpp/offers" : [ null ],
+      "bpp/providers" : [ null ]
+    }
+  },
+  "error" : null
+}
+2022-07-04 23:59:16.582  INFO 39447 --- [pool-3-thread-2] c.x.o.n.MasterOndcHttpClient             : callback response payload = {"message":{"ack":{"status":"ACK"}}}
+callback response status code = 200
+callback response content type = application/json
+callback response payload = {"message":{"ack":{"status":"ACK"}}}
+created"1656959477"
+expires"1657019477"
+keyId"logistics.ondcsellerapp.com|96aafd4d-5591-4b56-9094-148a054ba507|ed25519"
+signature"z/xRosJVtsTtJCnqIY2Q989gy+yIrumsentP663d2CmLdzBiCfKCzpeoSRvRFwWpOJ4OSkikpPXdTqAfMK6aAw
+2022-07-05 00:01:17.401  INFO 39447 --- [nio-8080-exec-5] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: NEJOakiT5PirQzLk0qBuAlvYL8W00hAh6LxxBH7LArMtsyMChmaImxX/jxY9Cm9bgO54KbD8W+MXxMXLejwrtQ==
+Signature : z/xRosJVtsTtJCnqIY2Q989gy+yIrumsentP663d2CmLdzBiCfKCzpeoSRvRFwWpOJ4OSkikpPXdTqAfMK6aAw requestData : (created): 1656959477
+(expires): 1657019477
+digest: BLAKE-512=NEJOakiT5PirQzLk0qBuAlvYL8W00hAh6LxxBH7LArMtsyMChmaImxX/jxY9Cm9bgO54KbD8W+MXxMXLejwrtQ== PublicKey : rD0T71f75gzK/wEqSCBNspK4mfb2vZ7B/PGELPpa4kE=
+2022-07-05 00:01:17.402  INFO 39447 --- [nio-8080-exec-5] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-05 00:01:17.402  INFO 39447 --- [nio-8080-exec-5] c.x.o.r.FrontController                  : Init Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"init","core_version":"1.0.11","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order":{"provider":{"id":"103","locations":[{"id":"18275-Location-1"}]},"items":[{"id":"103","price":{"currency":"INR","value":"64","maximum_value":"0"},"descriptor":{"name":"Standard Delivery"},"category_id":"Standard Delivery","matched":false,"related":false,"recommended":false,"@ondc/org/returnable":false,"@ondc/org/seller_pickup_return":false,"@ondc/org/return_window":"","@ondc/org/cancellable":false,"@ondc/org/available_on_cod":false,"@ondc/org/time_to_ship":"","@ondc/org/net_quantity_or_measure_of_commodity_in_pkg":"","@ondc/org/month_year_of_manufacture_packing_import":"","@ondc/org/imported_product_country_of_origin":"","@ondc/org/contact_details_consumer_care":"","AvailableQuantity":0,"ProviderID":""}],"billing":{"name":"SELLMETRIC PRIVATE LIMITED","phone":"9650439777","address":{"door":"1, 621/A","name":"12th main road , Hal 2nd stage","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar Bangalore"},"email":"billing@sellerapp.com","tax_number":"29ABDCS3411L1Z7"},"fulfillment":{"type":"Delivery","vehicle":{"registration":""},"start":{"person":{"name":"Gaurav"},"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","ward":"above Just Dogs","building":"san jose 3 floor","street":"12 main road","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in"}},"end":{"location":{"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075","locality":"4th Main Road, HAL 3rd stage"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in"}}},"payment":{"type":"POST-FULFILLMENT","@ondc/org/settlement_window":"PT7D","@ondc/org/settlement_details":[{"settlement_counterparty":"buyer-app","settlement_phase":"","settlement_type":"upi","settlement_bank_account_no":"XXXXXXXXXX","settlement_ifsc_code":"XXXXXXXXX","settlement_status":"","settlement_reference":""}],"@ondc/org/collection_preference":"0"},"@ondc/org/linked_order":{"provider":{"address":{}},"order":{"weight":{"range":{}},"dimension":{"length":{"range":{}},"breadth":{"range":{}},"height":{"range":{}}},"price":{"maximum_value":"0"},"payment":{}}}}}}
+Payload for init request =  {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"init","core_version":"1.0.11","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order":{"provider":{"id":"103","locations":[{"id":"18275-Location-1"}]},"items":[{"id":"103","price":{"currency":"INR","value":"64","maximum_value":"0"},"descriptor":{"name":"Standard Delivery"},"category_id":"Standard Delivery","matched":false,"related":false,"recommended":false,"@ondc/org/returnable":false,"@ondc/org/seller_pickup_return":false,"@ondc/org/return_window":"","@ondc/org/cancellable":false,"@ondc/org/available_on_cod":false,"@ondc/org/time_to_ship":"","@ondc/org/net_quantity_or_measure_of_commodity_in_pkg":"","@ondc/org/month_year_of_manufacture_packing_import":"","@ondc/org/imported_product_country_of_origin":"","@ondc/org/contact_details_consumer_care":"","AvailableQuantity":0,"ProviderID":""}],"billing":{"name":"SELLMETRIC PRIVATE LIMITED","phone":"9650439777","address":{"door":"1, 621/A","name":"12th main road , Hal 2nd stage","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar Bangalore"},"email":"billing@sellerapp.com","tax_number":"29ABDCS3411L1Z7"},"fulfillment":{"type":"Delivery","vehicle":{"registration":""},"start":{"person":{"name":"Gaurav"},"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","ward":"above Just Dogs","building":"san jose 3 floor","street":"12 main road","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in"}},"end":{"location":{"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075","locality":"4th Main Road, HAL 3rd stage"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in"}}},"payment":{"type":"POST-FULFILLMENT","@ondc/org/settlement_window":"PT7D","@ondc/org/settlement_details":[{"settlement_counterparty":"buyer-app","settlement_phase":"","settlement_type":"upi","settlement_bank_account_no":"XXXXXXXXXX","settlement_ifsc_code":"XXXXXXXXX","settlement_status":"","settlement_reference":""}],"@ondc/org/collection_preference":"0"},"@ondc/org/linked_order":{"provider":{"address":{}},"order":{"weight":{"range":{}},"dimension":{"length":{"range":{}},"breadth":{"range":{}},"height":{"range":{}}},"price":{"maximum_value":"0"},"payment":{}}}}}}
+2022-07-05 00:01:17.449  INFO 39447 --- [pool-3-thread-3] c.x.o.a.AuthenticationManager            : Generating Authentication String for header
+2022-07-05 00:01:17.449  INFO 39447 --- [pool-3-thread-3] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: nUqCQ6nZhiOP3ybqLvy1aW9WTKxV+4Deratjplw6cr5hKKyxxtiSY6bVD32ZG/+Fi3o7CLS3DxOhc5SAyyIffA==
+2022-07-05 00:01:17.451  INFO 39447 --- [pool-3-thread-3] c.x.o.a.SignatureProcessor               : Signature Generated : QXX9LKsJqq11gSw+bvfYvksUoXjrQSedbcrG6BU34X49G5wCQuecMZWojM9gkvKe9NcxloVvwlcf/IO4KZb9BQ==
+2022-07-05 00:01:17.451  INFO 39447 --- [pool-3-thread-3] c.x.o.a.AuthenticationManager            : Signed payload QXX9LKsJqq11gSw+bvfYvksUoXjrQSedbcrG6BU34X49G5wCQuecMZWojM9gkvKe9NcxloVvwlcf/IO4KZb9BQ== 
+Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959477", expires="1656959577", headers="(created) (expires) digest", signature="QXX9LKsJqq11gSw+bvfYvksUoXjrQSedbcrG6BU34X49G5wCQuecMZWojM9gkvKe9NcxloVvwlcf/IO4KZb9BQ=="
+2022-07-05 00:01:17.451  INFO 39447 --- [pool-3-thread-3] c.x.o.a.AuthenticationManager            : Authentication header generated Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959477", expires="1656959577", headers="(created) (expires) digest", signature="QXX9LKsJqq11gSw+bvfYvksUoXjrQSedbcrG6BU34X49G5wCQuecMZWojM9gkvKe9NcxloVvwlcf/IO4KZb9BQ=="
+ 
+2022-07-05 00:01:17.451  INFO 39447 --- [pool-3-thread-3] c.x.o.n.MasterOndcHttpClient             : Callback Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"on_init","core_version":"1.0.11","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-07-05T00:01:17+05:30","coreDataJson":null},"message":{"order":{"id":null,"order_id":null,"state":null,"fulfillment":{"type":"Delivery","tracking":false,"start":{"time":null,"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","building":"san jose 3 floor","street":"12 main road","locality":"Indiranagar","ward":"above Just Dogs","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in","tags":null},"instructions":null},"end":{"time":null,"location":{"id":null,"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","street":null,"locality":"4th Main Road, HAL 3rd stage","ward":null,"city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in","tags":null},"instructions":null},"agent":null,"vehicle":{"category":null,"size":null,"registration":""},"@ondc/org/awb_no":null,"@ondc/org/ewaybillno":null,"@ondc/org/ebnexpirydate":null},"quote":{"price":{"currency":"INR","value":"7.0","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":null},"breakup":[{"title":null,"price":{"currency":"INR","value":"5.0","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":null},"@ondc/org/item_id":"18275-Item-1","@ondc/org/title_type":"DeliveryCharge"},{"title":"RTOcharges","price":{"currency":"INR","value":"2.0","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":null},"@ondc/org/item_id":null,"@ondc/org/title_type":"RTOCharge"}]},"location":null,"locations":null,"provider":{"id":"103","items":null,"locations":[{"id":"18275-Location-1","gps":null,"address":null}],"name":null},"provider_location":null,"order":null,"coreDataJson":null},"order_id":null}}
+2022-07-05 00:01:17.882  INFO 39447 --- [pool-3-thread-3] c.x.o.n.MasterOndcHttpClient             : callback response payload = {"message":{"ack":{"status":"ACK"}}}
+callback response status code = 200
+callback response content type = application/json
+callback response payload = {"message":{"ack":{"status":"ACK"}}}
+executed callback for init flow: {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"on_init","core_version":"1.0.11","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-07-05T00:01:17+05:30","coreDataJson":null},"message":{"order":{"id":null,"order_id":null,"state":null,"fulfillment":{"type":"Delivery","tracking":false,"start":{"time":null,"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","building":"san jose 3 floor","street":"12 main road","locality":"Indiranagar","ward":"above Just Dogs","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in","tags":null},"instructions":null},"end":{"time":null,"location":{"id":null,"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","street":null,"locality":"4th Main Road, HAL 3rd stage","ward":null,"city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in","tags":null},"instructions":null},"agent":null,"vehicle":{"category":null,"size":null,"registration":""},"@ondc/org/awb_no":null,"@ondc/org/ewaybillno":null,"@ondc/org/ebnexpirydate":null},"quote":{"price":{"currency":"INR","value":"7.0","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":null},"breakup":[{"title":null,"price":{"currency":"INR","value":"5.0","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":null},"@ondc/org/item_id":"18275-Item-1","@ondc/org/title_type":"DeliveryCharge"},{"title":"RTOcharges","price":{"currency":"INR","value":"2.0","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":null},"@ondc/org/item_id":null,"@ondc/org/title_type":"RTOCharge"}]},"location":null,"locations":null,"provider":{"id":"103","items":null,"locations":[{"id":"18275-Location-1","gps":null,"address":null}],"name":null},"provider_location":null,"order":null,"coreDataJson":null},"order_id":null}}with bap_uri: https://ondctest.sellerapp.in/bapl
+created"1656959488"
+expires"1657019488"
+keyId"logistics.ondcsellerapp.com|96aafd4d-5591-4b56-9094-148a054ba507|ed25519"
+signature"232XTXNXXoqGbCsp49sLdzHewo1X05izXdYx69uWTbvzhK7sL9dCSun6ZQdO/nYthma2RHBjDs+pyaOVg9F/BA
+2022-07-05 00:01:28.110  INFO 39447 --- [nio-8080-exec-6] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: Aqp9+Gd9+lwNXPqAWEK7V8b9nQTFJkWoBZGnDTcQO/Kyqt6RISSX3VA+NgPhwyxma65J/BrB3pI6431OHBEbuQ==
+Signature : 232XTXNXXoqGbCsp49sLdzHewo1X05izXdYx69uWTbvzhK7sL9dCSun6ZQdO/nYthma2RHBjDs+pyaOVg9F/BA requestData : (created): 1656959488
+(expires): 1657019488
+digest: BLAKE-512=Aqp9+Gd9+lwNXPqAWEK7V8b9nQTFJkWoBZGnDTcQO/Kyqt6RISSX3VA+NgPhwyxma65J/BrB3pI6431OHBEbuQ== PublicKey : rD0T71f75gzK/wEqSCBNspK4mfb2vZ7B/PGELPpa4kE=
+2022-07-05 00:01:28.111  INFO 39447 --- [nio-8080-exec-6] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-05 00:01:28.111  INFO 39447 --- [nio-8080-exec-6] c.x.o.r.FrontController                  : Confirm Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"confirm","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order":{"id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","provider":{"id":"103","descriptor":{"name":"Standard Delivery"},"rating":"2.1","locations":[{"id":"18275-Location-1"}],"items":[{"id":"103","price":{"currency":"INR","value":"64","maximum_value":"0"},"descriptor":{"name":"Standard Delivery"},"category_id":"Standard Delivery","matched":false,"related":false,"recommended":false,"@ondc/org/returnable":false,"@ondc/org/seller_pickup_return":false,"@ondc/org/return_window":"","@ondc/org/cancellable":false,"@ondc/org/available_on_cod":false,"@ondc/org/time_to_ship":"","@ondc/org/net_quantity_or_measure_of_commodity_in_pkg":"","@ondc/org/month_year_of_manufacture_packing_import":"","@ondc/org/imported_product_country_of_origin":"","@ondc/org/contact_details_consumer_care":"","AvailableQuantity":0,"ProviderID":""}]},"items":[{"id":"103","price":{"currency":"INR","value":"64","maximum_value":"0"},"quantity":{"count":1},"descriptor":{"name":"Standard Delivery","long_desc":"Standard Delivery for F\u0026B","short_desc":"Standard Delivery for F\u0026B"},"category_id":"Standard Delivery","matched":false,"related":false,"recommended":false,"@ondc/org/returnable":false,"@ondc/org/seller_pickup_return":false,"@ondc/org/return_window":"","@ondc/org/cancellable":false,"@ondc/org/available_on_cod":false,"@ondc/org/time_to_ship":"","@ondc/org/net_quantity_or_measure_of_commodity_in_pkg":"","@ondc/org/month_year_of_manufacture_packing_import":"","@ondc/org/imported_product_country_of_origin":"","@ondc/org/contact_details_consumer_care":"","AvailableQuantity":0,"ProviderID":""}],"billing":{"name":"SELLMETRIC PRIVATE LIMITED","phone":"9650439777","address":{"door":"1, 621/A","name":"12th main road , Hal 2nd stage","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar Bangalore"},"email":"billing@sellerapp.com","tax_number":"29ABDCS3411L1Z7"},"fulfillment":{"type":"Prepaid","tracking":true,"vehicle":{"registration":""},"start":{"instructions":{"long_desc":"QR code will be attached to package","short_desc":"XYZ1","images":["URL or data string as per spec"]},"person":{"name":"Gaurav"},"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","ward":"above Just Dogs","building":"san jose 3 floor","street":"12 main road","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in"}},"end":{"instructions":{"long_desc":"drop package at security gate","short_desc":"XYZ2"},"location":{"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075","locality":"4th Main Road, HAL 3rd stage"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in"}},"tags":{"@ondc/org/order_ready_to_ship":"no"},"@ondc/org/awb_no":"awb124234545545"},"payment":{"type":"POST-FULFILLMENT","@ondc/org/settlement_window":"PT7D","@ondc/org/settlement_details":[{"settlement_counterparty":"buyer-app","settlement_phase":"","settlement_type":"upi","settlement_bank_account_no":"XXXXXXXXXX","settlement_ifsc_code":"XXXXXXXXX","settlement_status":"","settlement_reference":""}],"@ondc/org/collection_preference":"0"},"@ondc/org/linked_order":{"items":[{"descriptor":{"name":"Atta"},"category_id":"Grocery","measure":{"unit":"Kilogram","value":"5"},"quantity":{"count":2},"price":{"currency":"INR","value":"300","maximum_value":"0"}}],"provider":{"id":"slrp-1331997","descriptor":{"name":"Aadishwar Store"},"address":{"name":"KHB Towers","street":"6th Block","city":"Bengaluru","state":"Karnataka","area_code":"560070","locality":"Koramangala"}},"order":{"id":"ABCDEFGH","weight":{"value":"10","range":{},"unit":"Kilogram"},"dimension":{"length":{"range":{}},"breadth":{"range":{}},"height":{"range":{}}},"price":{"currency":"INR","value":"343","maximum_value":"0"},"payment":{}}}}}}
+Payload for confirm request =  {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"confirm","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order":{"id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","provider":{"id":"103","descriptor":{"name":"Standard Delivery"},"rating":"2.1","locations":[{"id":"18275-Location-1"}],"items":[{"id":"103","price":{"currency":"INR","value":"64","maximum_value":"0"},"descriptor":{"name":"Standard Delivery"},"category_id":"Standard Delivery","matched":false,"related":false,"recommended":false,"@ondc/org/returnable":false,"@ondc/org/seller_pickup_return":false,"@ondc/org/return_window":"","@ondc/org/cancellable":false,"@ondc/org/available_on_cod":false,"@ondc/org/time_to_ship":"","@ondc/org/net_quantity_or_measure_of_commodity_in_pkg":"","@ondc/org/month_year_of_manufacture_packing_import":"","@ondc/org/imported_product_country_of_origin":"","@ondc/org/contact_details_consumer_care":"","AvailableQuantity":0,"ProviderID":""}]},"items":[{"id":"103","price":{"currency":"INR","value":"64","maximum_value":"0"},"quantity":{"count":1},"descriptor":{"name":"Standard Delivery","long_desc":"Standard Delivery for F\u0026B","short_desc":"Standard Delivery for F\u0026B"},"category_id":"Standard Delivery","matched":false,"related":false,"recommended":false,"@ondc/org/returnable":false,"@ondc/org/seller_pickup_return":false,"@ondc/org/return_window":"","@ondc/org/cancellable":false,"@ondc/org/available_on_cod":false,"@ondc/org/time_to_ship":"","@ondc/org/net_quantity_or_measure_of_commodity_in_pkg":"","@ondc/org/month_year_of_manufacture_packing_import":"","@ondc/org/imported_product_country_of_origin":"","@ondc/org/contact_details_consumer_care":"","AvailableQuantity":0,"ProviderID":""}],"billing":{"name":"SELLMETRIC PRIVATE LIMITED","phone":"9650439777","address":{"door":"1, 621/A","name":"12th main road , Hal 2nd stage","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar Bangalore"},"email":"billing@sellerapp.com","tax_number":"29ABDCS3411L1Z7"},"fulfillment":{"type":"Prepaid","tracking":true,"vehicle":{"registration":""},"start":{"instructions":{"long_desc":"QR code will be attached to package","short_desc":"XYZ1","images":["URL or data string as per spec"]},"person":{"name":"Gaurav"},"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","ward":"above Just Dogs","building":"san jose 3 floor","street":"12 main road","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038","locality":"Indiranagar"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in"}},"end":{"instructions":{"long_desc":"drop package at security gate","short_desc":"XYZ2"},"location":{"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075","locality":"4th Main Road, HAL 3rd stage"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in"}},"tags":{"@ondc/org/order_ready_to_ship":"no"},"@ondc/org/awb_no":"awb124234545545"},"payment":{"type":"POST-FULFILLMENT","@ondc/org/settlement_window":"PT7D","@ondc/org/settlement_details":[{"settlement_counterparty":"buyer-app","settlement_phase":"","settlement_type":"upi","settlement_bank_account_no":"XXXXXXXXXX","settlement_ifsc_code":"XXXXXXXXX","settlement_status":"","settlement_reference":""}],"@ondc/org/collection_preference":"0"},"@ondc/org/linked_order":{"items":[{"descriptor":{"name":"Atta"},"category_id":"Grocery","measure":{"unit":"Kilogram","value":"5"},"quantity":{"count":2},"price":{"currency":"INR","value":"300","maximum_value":"0"}}],"provider":{"id":"slrp-1331997","descriptor":{"name":"Aadishwar Store"},"address":{"name":"KHB Towers","street":"6th Block","city":"Bengaluru","state":"Karnataka","area_code":"560070","locality":"Koramangala"}},"order":{"id":"ABCDEFGH","weight":{"value":"10","range":{},"unit":"Kilogram"},"dimension":{"length":{"range":{}},"breadth":{"range":{}},"height":{"range":{}}},"price":{"currency":"INR","value":"343","maximum_value":"0"},"payment":{}}}}}}
+null
+2022-07-05 00:01:28.246  INFO 39447 --- [pool-3-thread-4] c.x.o.a.AuthenticationManager            : Generating Authentication String for header
+2022-07-05 00:01:28.247  INFO 39447 --- [pool-3-thread-4] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: Ph1zDR3IDHg8tl5S87R47eXvOLCEdx1VjnbbkGmRHbesGWh/3GwqiPr7ydTbepFzqZrYyVreRM6tysmMIgeTeQ==
+2022-07-05 00:01:28.248  INFO 39447 --- [pool-3-thread-4] c.x.o.a.SignatureProcessor               : Signature Generated : uNj26TQrFQuaWe4d2jjm67g1b3dSd/1kG6VgZa23etQW8gp6muDK4Q8brtQ+eJf48rp5FDFW49U4TbjLfKK2AQ==
+2022-07-05 00:01:28.248  INFO 39447 --- [pool-3-thread-4] c.x.o.a.AuthenticationManager            : Signed payload uNj26TQrFQuaWe4d2jjm67g1b3dSd/1kG6VgZa23etQW8gp6muDK4Q8brtQ+eJf48rp5FDFW49U4TbjLfKK2AQ== 
+Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959488", expires="1656959588", headers="(created) (expires) digest", signature="uNj26TQrFQuaWe4d2jjm67g1b3dSd/1kG6VgZa23etQW8gp6muDK4Q8brtQ+eJf48rp5FDFW49U4TbjLfKK2AQ=="
+2022-07-05 00:01:28.249  INFO 39447 --- [pool-3-thread-4] c.x.o.a.AuthenticationManager            : Authentication header generated Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959488", expires="1656959588", headers="(created) (expires) digest", signature="uNj26TQrFQuaWe4d2jjm67g1b3dSd/1kG6VgZa23etQW8gp6muDK4Q8brtQ+eJf48rp5FDFW49U4TbjLfKK2AQ=="
+ 
+2022-07-05 00:01:28.249  INFO 39447 --- [pool-3-thread-4] c.x.o.n.MasterOndcHttpClient             : Callback Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"on_confirm","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-07-05T00:01:28+05:30","coreDataJson":null},"message":{"order":{"id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","order_id":null,"state":"Active","fulfillment":{"type":"Prepaid","tracking":true,"start":{"time":{"label":null,"timestamp":null,"duration":null,"range":{"start":"2022-06-14T10:00:00.000Z","end":"2022-06-14T10:30:00.000Z"},"days":null,"schedule":null},"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","building":"san jose 3 floor","street":"12 main road","locality":"Indiranagar","ward":"above Just Dogs","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in","tags":null},"instructions":{"short_desc":"XYZ1","long_desc":"QR code will be attached to package","name":null,"code":null,"symbol":null,"images":["URL or data string as per spec"],"audio":null,"3d_render":null}},"end":{"time":{"label":null,"timestamp":null,"duration":null,"range":{"start":"2022-06-14T12:00:00.000Z","end":"2022-06-14T12:30:00.000Z"},"days":null,"schedule":null},"location":{"id":null,"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","street":null,"locality":"4th Main Road, HAL 3rd stage","ward":null,"city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in","tags":null},"instructions":{"short_desc":"XYZ2","long_desc":"drop package at security gate","name":null,"code":null,"symbol":null,"images":null,"audio":null,"3d_render":null}},"agent":{"name":"Ramu","phone":"9886098860"},"vehicle":{"category":"mini-truck","size":"small","registration":"2020"},"@ondc/org/awb_no":"402883e981ca77290181ca7b50940000","@ondc/org/ewaybillno":"402883e981ca77290181ca7b50940000","@ondc/org/ebnexpirydate":1657564288205},"quote":null,"location":null,"locations":null,"provider":{"id":"103","items":[{"id":"103","parent_item_id":null,"descriptor":{"name":"Standard Delivery","code":null,"symbol":null,"short_desc":null,"long_desc":null,"images":null,"audio":null,"3d_render":null},"price":{"currency":"INR","value":"64","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":"0"},"category_id":"Standard Delivery","fulfillment_id":null,"rating":0,"location_id":null,"time":null,"rateable":false,"matched":false,"related":false,"recommended":false,"tags":null}],"locations":[{"id":"18275-Location-1","gps":null,"address":null}],"name":null},"provider_location":null,"order":null,"coreDataJson":null},"order_id":null}}
+2022-07-05 00:01:28.634  INFO 39447 --- [pool-3-thread-4] c.x.o.n.MasterOndcHttpClient             : callback response payload = {"message":{"ack":{"status":"ACK"}}}
+callback response status code = 200
+callback response content type = application/json
+callback response payload = {"message":{"ack":{"status":"ACK"}}}
+executed callback for confirm flow: {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"on_confirm","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-07-05T00:01:28+05:30","coreDataJson":null},"message":{"order":{"id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","order_id":null,"state":"Active","fulfillment":{"type":"Prepaid","tracking":true,"start":{"time":{"label":null,"timestamp":null,"duration":null,"range":{"start":"2022-06-14T10:00:00.000Z","end":"2022-06-14T10:30:00.000Z"},"days":null,"schedule":null},"location":{"id":"tki-1000","gps":"12.970557,77.6448023","address":{"door":"233","name":"san jose building","building":"san jose 3 floor","street":"12 main road","locality":"Indiranagar","ward":"above Just Dogs","city":"Bangalore","state":"Karnataka","country":"India","area_code":"560038"}},"contact":{"phone":"9650439777","email":"sales@trykaro.in","tags":null},"instructions":{"short_desc":"XYZ1","long_desc":"QR code will be attached to package","name":null,"code":null,"symbol":null,"images":["URL or data string as per spec"],"audio":null,"3d_render":null}},"end":{"time":{"label":null,"timestamp":null,"duration":null,"range":{"start":"2022-06-14T12:00:00.000Z","end":"2022-06-14T12:30:00.000Z"},"days":null,"schedule":null},"location":{"id":null,"gps":"12.970607148450192,77.64796614646913","address":{"door":"55, 1st Floor, 1st Cross","name":"4th Main Road, HAL 3rd stage","building":"Prestige Towers","street":null,"locality":"4th Main Road, HAL 3rd stage","ward":null,"city":"Bengaluru","state":"Karnataka","country":"India","area_code":"560075"}},"contact":{"phone":"9845536275","email":"sales@trykaro.in","tags":null},"instructions":{"short_desc":"XYZ2","long_desc":"drop package at security gate","name":null,"code":null,"symbol":null,"images":null,"audio":null,"3d_render":null}},"agent":{"name":"Ramu","phone":"9886098860"},"vehicle":{"category":"mini-truck","size":"small","registration":"2020"},"@ondc/org/awb_no":"402883e981ca77290181ca7b50940000","@ondc/org/ewaybillno":"402883e981ca77290181ca7b50940000","@ondc/org/ebnexpirydate":1657564288205},"quote":null,"location":null,"locations":null,"provider":{"id":"103","items":[{"id":"103","parent_item_id":null,"descriptor":{"name":"Standard Delivery","code":null,"symbol":null,"short_desc":null,"long_desc":null,"images":null,"audio":null,"3d_render":null},"price":{"currency":"INR","value":"64","estimated_value":null,"computed_value":null,"listed_value":null,"offered_value":null,"minimum_value":null,"maximum_value":"0"},"category_id":"Standard Delivery","fulfillment_id":null,"rating":0,"location_id":null,"time":null,"rateable":false,"matched":false,"related":false,"recommended":false,"tags":null}],"locations":[{"id":"18275-Location-1","gps":null,"address":null}],"name":null},"provider_location":null,"order":null,"coreDataJson":null},"order_id":null}} with bap_uri: https://ondctest.sellerapp.in/baplon_confirm
+created"1656959498"
+expires"1657019498"
+keyId"logistics.ondcsellerapp.com|96aafd4d-5591-4b56-9094-148a054ba507|ed25519"
+signature"WxQjl4E0/rnrMpDM9rcXju7YVo7C+EVcOFM3mhjW1mbiVe1HjCHvlOglIunkdKVVHZbII7+koqv/2bbec+j/DQ
+2022-07-05 00:01:38.118  INFO 39447 --- [nio-8080-exec-8] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: JGbwHn6rILXmXnGR2Fm70g83FF5+vxWzxt6OWW+JS8VXtevtvyWXD2PLWFSIzC6xaN3ZA4x7JzwK+jpcxNTtTw==
+Signature : WxQjl4E0/rnrMpDM9rcXju7YVo7C+EVcOFM3mhjW1mbiVe1HjCHvlOglIunkdKVVHZbII7+koqv/2bbec+j/DQ requestData : (created): 1656959498
+(expires): 1657019498
+digest: BLAKE-512=JGbwHn6rILXmXnGR2Fm70g83FF5+vxWzxt6OWW+JS8VXtevtvyWXD2PLWFSIzC6xaN3ZA4x7JzwK+jpcxNTtTw== PublicKey : rD0T71f75gzK/wEqSCBNspK4mfb2vZ7B/PGELPpa4kE=
+2022-07-05 00:01:38.119  INFO 39447 --- [nio-8080-exec-8] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-05 00:01:38.119  INFO 39447 --- [nio-8080-exec-8] c.x.o.r.FrontController                  : Track Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"track","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order_id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","callback_url":"www.sellerapp.com"}}
+2022-07-05 00:01:38.130 ERROR 39447 --- [pool-3-thread-1] c.x.o.a.c.r.TrackRequestProcessor        : Error : No such order
+created"1656959505"
+expires"1657019505"
+keyId"logistics.ondcsellerapp.com|96aafd4d-5591-4b56-9094-148a054ba507|ed25519"
+signature"RPufVAJA+Bcq8cfgJ3zIJobg+//PVbSzpbTSTuHZbS9bU+MBXyGMCnbVJDm6UnXU68EqrvEC4a3mSnL4t1T4AQ
+2022-07-05 00:01:45.073  INFO 39447 --- [nio-8080-exec-9] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: W3xSh17SB5fvhRS9xxT0R4n2MZn22UvNBmXm5mkPgrG0kcQX3DQJCHkkUMaUn8YC8hivOeBccMs/KslgLeVF7A==
+Signature : RPufVAJA+Bcq8cfgJ3zIJobg+//PVbSzpbTSTuHZbS9bU+MBXyGMCnbVJDm6UnXU68EqrvEC4a3mSnL4t1T4AQ requestData : (created): 1656959505
+(expires): 1657019505
+digest: BLAKE-512=W3xSh17SB5fvhRS9xxT0R4n2MZn22UvNBmXm5mkPgrG0kcQX3DQJCHkkUMaUn8YC8hivOeBccMs/KslgLeVF7A== PublicKey : rD0T71f75gzK/wEqSCBNspK4mfb2vZ7B/PGELPpa4kE=
+2022-07-05 00:01:45.075  INFO 39447 --- [nio-8080-exec-9] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-05 00:01:45.075  INFO 39447 --- [nio-8080-exec-9] c.x.o.r.FrontController                  : Status Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"status","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order_id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072"}}
+Payload for status request =  {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"status","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order_id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072"}}
+2022-07-05 00:01:45.207  INFO 39447 --- [pool-3-thread-2] c.x.o.a.AuthenticationManager            : Generating Authentication String for header
+2022-07-05 00:01:45.217  INFO 39447 --- [pool-3-thread-2] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: AARsql02fOr6cJIwjC93VuTvxEbLhoUTNscEOa83YXVfBTt15dJUQxj6E+TqFOHWltYy6GXTb3Xijrre1Jdhmg==
+2022-07-05 00:01:45.218  INFO 39447 --- [pool-3-thread-2] c.x.o.a.SignatureProcessor               : Signature Generated : iEp1DRzYWybtF9C0fkQmaTv9rhaR3AO8saTdVi2Ql5x8esAmcLCbBjiHPESq3VYS1arSSxvyZNFMSGwi2AeJCQ==
+2022-07-05 00:01:45.218  INFO 39447 --- [pool-3-thread-2] c.x.o.a.AuthenticationManager            : Signed payload iEp1DRzYWybtF9C0fkQmaTv9rhaR3AO8saTdVi2Ql5x8esAmcLCbBjiHPESq3VYS1arSSxvyZNFMSGwi2AeJCQ== 
+Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959505", expires="1656959605", headers="(created) (expires) digest", signature="iEp1DRzYWybtF9C0fkQmaTv9rhaR3AO8saTdVi2Ql5x8esAmcLCbBjiHPESq3VYS1arSSxvyZNFMSGwi2AeJCQ=="
+2022-07-05 00:01:45.218  INFO 39447 --- [pool-3-thread-2] c.x.o.a.AuthenticationManager            : Authentication header generated Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959505", expires="1656959605", headers="(created) (expires) digest", signature="iEp1DRzYWybtF9C0fkQmaTv9rhaR3AO8saTdVi2Ql5x8esAmcLCbBjiHPESq3VYS1arSSxvyZNFMSGwi2AeJCQ=="
+ 
+2022-07-05 00:01:45.218  INFO 39447 --- [pool-3-thread-2] c.x.o.n.MasterOndcHttpClient             : Callback Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"on_status","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-07-05T00:01:45+05:30","coreDataJson":null},"message":{"order":{"id":null,"order_id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","state":"Active","fulfillment":null,"quote":null,"location":null,"locations":null,"provider":null,"provider_location":null,"order":null,"coreDataJson":null},"order_id":null}}
+2022-07-05 00:01:45.612  INFO 39447 --- [pool-3-thread-2] c.x.o.n.MasterOndcHttpClient             : callback response payload = {"message":{"ack":{"status":"ACK"}}}
+callback response status code = 200
+callback response content type = application/json
+callback response payload = {"message":{"ack":{"status":"ACK"}}}
+executed callback for status flow: {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"on_status","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-07-05T00:01:45+05:30","coreDataJson":null},"message":{"order":{"id":null,"order_id":"92bcac09-0b0a-4d35-bcc8-e4c7d206b072","state":"Active","fulfillment":null,"quote":null,"location":null,"locations":null,"provider":null,"provider_location":null,"order":null,"coreDataJson":null},"order_id":null}}with bap_uri: https://ondctest.sellerapp.in/bapl
+created"1656959668"
+expires"1657019668"
+keyId"logistics.ondcsellerapp.com|96aafd4d-5591-4b56-9094-148a054ba507|ed25519"
+signature"NTovhA05DrW8IXh+V5vAsJqGilPTvzu4bzSg89yi0wJxv6QT+Bsft9RTGDUpdsmzbUEYgLNVrv9+qpUFRi2tCQ
+2022-07-05 00:04:28.590  INFO 39447 --- [nio-8080-exec-2] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: Qet3y90p2Q5kA3r/N9cPwY1MYl/63/gw5LwBcbClT6OFRxacIuIEGVbx3fBowIVYOoSdkdC6KVxrPOb+WE+FCA==
+Signature : NTovhA05DrW8IXh+V5vAsJqGilPTvzu4bzSg89yi0wJxv6QT+Bsft9RTGDUpdsmzbUEYgLNVrv9+qpUFRi2tCQ requestData : (created): 1656959668
+(expires): 1657019668
+digest: BLAKE-512=Qet3y90p2Q5kA3r/N9cPwY1MYl/63/gw5LwBcbClT6OFRxacIuIEGVbx3fBowIVYOoSdkdC6KVxrPOb+WE+FCA== PublicKey : rD0T71f75gzK/wEqSCBNspK4mfb2vZ7B/PGELPpa4kE=
+2022-07-05 00:04:28.591  INFO 39447 --- [nio-8080-exec-2] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-05 00:04:28.591  INFO 39447 --- [nio-8080-exec-2] c.x.o.r.FrontController                  : Track Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"track","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order_id":"647705b1-addf-441a-9c37-e2ff3f3c2db4","callback_url":"www.sellerapp.com"}}
+2022-07-05 00:04:28.599 ERROR 39447 --- [pool-3-thread-3] c.x.o.a.c.r.TrackRequestProcessor        : Error : No such order
+created"1656959904"
+expires"1657019904"
+keyId"logistics.ondcsellerapp.com|96aafd4d-5591-4b56-9094-148a054ba507|ed25519"
+signature"qhv8FeQy4RviMj5E5SIYfFqOlJNgLkceImp4uAlmz5o3OP4Gy6Fd04D36tbs8S9lDE0r3ZV2Era6oLW0dm2bDw
+2022-07-05 00:08:24.320  INFO 39447 --- [nio-8080-exec-7] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: Qet3y90p2Q5kA3r/N9cPwY1MYl/63/gw5LwBcbClT6OFRxacIuIEGVbx3fBowIVYOoSdkdC6KVxrPOb+WE+FCA==
+Signature : qhv8FeQy4RviMj5E5SIYfFqOlJNgLkceImp4uAlmz5o3OP4Gy6Fd04D36tbs8S9lDE0r3ZV2Era6oLW0dm2bDw requestData : (created): 1656959904
+(expires): 1657019904
+digest: BLAKE-512=Qet3y90p2Q5kA3r/N9cPwY1MYl/63/gw5LwBcbClT6OFRxacIuIEGVbx3fBowIVYOoSdkdC6KVxrPOb+WE+FCA== PublicKey : rD0T71f75gzK/wEqSCBNspK4mfb2vZ7B/PGELPpa4kE=
+2022-07-05 00:08:24.321  INFO 39447 --- [nio-8080-exec-7] c.x.o.a.SignatureProcessor               : Is Signature Verified : true
+2022-07-05 00:08:24.322  INFO 39447 --- [nio-8080-exec-7] c.x.o.r.FrontController                  : Track Payload = {"context":{"domain":"nic2004:60232","country":"IND","city":"std:080","action":"track","core_version":"1.0.6","bap_id":"logistics.ondcsellerapp.com","bap_uri":"https://ondctest.sellerapp.in/bapl","bpp_id":"ondc.xbees.in","bpp_uri":"https://ondc.xbees.in/ondc","transaction_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","message_id":"879fc04e-5c14-408c-8c90-7eda779da9b0","timestamp":"2022-06-27T08:43:08Z"},"message":{"order_id":"647705b1-addf-441a-9c37-e2ff3f3c2db4","callback_url":"www.sellerapp.com"}}
+2022-07-05 00:08:24.330  INFO 39447 --- [pool-3-thread-4] c.x.o.a.AuthenticationManager            : Generating Authentication String for header
+2022-07-05 00:08:24.330  INFO 39447 --- [pool-3-thread-4] c.x.o.a.HashFunctionManager              : Base 64 encoded hash function BLAKE2B-512 for request: KIgt8kNmxG2zbHLdU3ausgXK6AarSn0BcPHxIjwekorfVqQVJ86ZQkhUZ3Ocy1RV6D07YSqKyF/zg58zDcDT1Q==
+2022-07-05 00:08:24.331  INFO 39447 --- [pool-3-thread-4] c.x.o.a.SignatureProcessor               : Signature Generated : k1Ulfr6+kUJw6UuogIEBkz7Nu60p5eaENxN1ktrA499I37KGQUiyPNrCB/Sq2hO5BTZhjE+DzsR8LSFpkhCiBg==
+2022-07-05 00:08:24.332  INFO 39447 --- [pool-3-thread-4] c.x.o.a.AuthenticationManager            : Signed payload k1Ulfr6+kUJw6UuogIEBkz7Nu60p5eaENxN1ktrA499I37KGQUiyPNrCB/Sq2hO5BTZhjE+DzsR8LSFpkhCiBg== 
+Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959904", expires="1656960004", headers="(created) (expires) digest", signature="k1Ulfr6+kUJw6UuogIEBkz7Nu60p5eaENxN1ktrA499I37KGQUiyPNrCB/Sq2hO5BTZhjE+DzsR8LSFpkhCiBg=="
+2022-07-05 00:08:24.339  INFO 39447 --- [pool-3-thread-4] c.x.o.a.AuthenticationManager            : Authentication header generated Signature keyId="ondc.xbees.in|96aa844d-c274-4b38-95b0-0e64f34e59bd|ed25519",algorithm="ed25519", created="1656959904", expires="1656960004", headers="(created) (expires) digest", signature="k1Ulfr6+kUJw6UuogIEBkz7Nu60p5eaENxN1ktrA499I37KGQUiyPNrCB/Sq2hO5BTZhjE+DzsR8LSFpkhCiBg=="
+ 
+2022-07-05 00:08:24.340  INFO 39447 --- [pool-3-thread-4] c.x.o.n.MasterOndcHttpClient             : Callback Payload = {
+  "context" : {
+    "domain" : "nic2004:60232",
+    "country" : "IND",
+    "city" : "std:080",
+    "action" : "track",
+    "core_version" : "1.0.6",
+    "bap_id" : "logistics.ondcsellerapp.com",
+    "bap_uri" : "https://ondctest.sellerapp.in/bapl",
+    "bpp_id" : "ondc.xbees.in",
+    "bpp_uri" : "https://ondc.xbees.in/ondc",
+    "transaction_id" : "879fc04e-5c14-408c-8c90-7eda779da9b0",
+    "message_id" : "879fc04e-5c14-408c-8c90-7eda779da9b0",
+    "timestamp" : "2022-06-27T08:43:08Z",
+    "coreDataJson" : null
+  },
+  "message" : {
+    "tracking" : {
+      "url" : "https://orders.xbees.in/54345",
+      "status" : "In-Transit"
+    }
+  }
+}
+2022-07-05 00:08:25.414  INFO 39447 --- [pool-3-thread-4] c.x.o.n.MasterOndcHttpClient             : callback response payload = {"message":{"ack":{"status":"ACK"}}}
+callback response status code = 200
+callback response content type = application/json
+callback response payload = {"message":{"ack":{"status":"ACK"}}}
